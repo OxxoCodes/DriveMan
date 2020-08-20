@@ -31,3 +31,9 @@ Tested on Python 3.8.2 - https://www.python.org/downloads/
     -s, -size       SOURCE                Displays the size of all files and folders within the given source, in bytes
     -h, -help       N/A                   Displays the basic syntax, list of commands, and the link to the project's GitHub page
  
+## Roadmap (In order of current importance):
+•Implement DropBox support
+•Implement OneDrive support
+•If possible, implement MEGA support through mega.py
+•While it's not a cloud storage service, per se, having the ability to move files directly to/from Internet Archive could be beneficial in some use cases
+•Box?
