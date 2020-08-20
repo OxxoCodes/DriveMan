@@ -33,7 +33,11 @@ Tested on Python 3.8.2 - https://www.python.org/downloads/
  
 ## Roadmap (In order of current importance):
 •Implement DropBox support
+
 •Implement OneDrive support
+
 •If possible, implement MEGA support through mega.py
+
 •While it's not a cloud storage service, per se, having the ability to move files directly to/from Internet Archive could be beneficial in some use cases
+
 •Box?
