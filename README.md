@@ -1,10 +1,8 @@
 # DriveMan
-A cloud-based file manager, currently focused on Google Drive
+A cloud file manager, currently focused on Google Drive
 
 # USAGE:
   `python driveman.py [ARGUMENTS]`
-
-When referring to files/folders located within Google Drive, ensure you are using the file ID. This can be found in the URL linking to the file/folder.
 
 # Dependencies:
 The Google Drive API must be enabled and installed on your device for DriveMan to operate correctly. In addition, a `credentials.json` file is required.
