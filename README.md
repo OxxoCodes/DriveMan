@@ -22,14 +22,19 @@ Tested on Python 3.8.2 - https://www.python.org/downloads/
  Aliases are stored as `YOURALIAS.pickle`
  When an alias is not recognized, your browser will open a webpage in which you can log into your Google account and allow DriveMan access to your Google Drive files.
  
-## Commands:
-    -u, -upload     DIR DEST              Uploads a file located in DIR to folder DEST
-    -d, -download   SOURCE DIR            Downloads a file from SOURCE to DIR
-    -r, -remove     SOURCE                Removes/deletes a file/folder located at SOURCE
-    -m, -meta       SOURCE                Displays the metadata for a file/folder in raw JSON
-    -l, -list       SOURCE                Lists the names of all files within a folder
-    -s, -size       SOURCE                Displays the size of all files and folders within the given source, in bytes
-    -h, -help       N/A                   Displays the basic syntax, list of commands, and the link to the project's GitHub page
+## Arguments:
+    -user, --username                        Specify the username/alias of the account being used
+    -sv, --service   SERVICE                 Specify the service being used (currently only supports gdrive)
+    -c, --copy     SOURCE DEST               Copies a file or folder from SOURCE to DIR
+    -d, --download       SOURCE DEST         Downloads a file or folder from SOURCE to DIR
+    -u, --upload       SOURCE DEST           Uploads a file or folder from SOURCE to DIR
+    -m, --move       SOURCE DEST             Move a file or folder from SOURCE to DIR (does not yet support local files)
+    -meta, --metadata       FILE/FOLDER      Lists all available metadata of a file or folder
+    -l, --list     DIR DEST                  Lists all files & folders available in DIR (including those in trash; not recursive)
+    -r, --remove   FILE/FOLDER               Removes a file located in DIR
+    -s, --size     FILE/FOLDER               Gets the size of a file or folder (currently broken)
+    -n, --nohash                             Don't ensure file integrity when uploading/downloading
+
  
 ## Roadmap (In order of current importance):
 •Implement DropBox support
