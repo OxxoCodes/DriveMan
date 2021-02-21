@@ -2,7 +2,7 @@
 A cloud-based file manager, currently focused on Google Drive
 
 # USAGE:
-  `python main.py [ALIAS] [COMMAND] [ARGUMENTS]`
+  `python driveman.py [ARGUMENTS]`
 
 When referring to files/folders located within Google Drive, ensure you are using the file ID. This can be found in the URL linking to the file/folder.
 
@@ -23,6 +23,9 @@ Tested on Python 3.8.2 - https://www.python.org/downloads/
  When an alias is not recognized, your browser will open a webpage in which you can log into your Google account and allow DriveMan access to your Google Drive files.
  
 ## Arguments:
+Note: When referring to local directories that contain spaces in their name, please surround them in double quotation marks. 
+For example: "C:/Users/John/My Directory"
+
     -user, --username                        Specify the username/alias of the account being used
     -sv, --service   SERVICE                 Specify the service being used (currently only supports gdrive)
     -c, --copy     SOURCE DEST               Copies a file or folder from SOURCE to DIR
