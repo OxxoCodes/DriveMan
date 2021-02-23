@@ -136,6 +136,10 @@ class GDrive:
         if os.path.isdir(path):
             self.uploadFolder(path, parents)
         else:
+            #If no parent is provided, then upload to "My Drive"
+            if parents is None:
+                parents = self.service.files().get(fileId='root').execute()['id']
+                
             if self.handleEmptyFile(path, parents) == True:
                 return True
         
@@ -145,10 +149,10 @@ class GDrive:
                 name = path.split('\\')[-1]
         
             file_metadata = {
-                    'name': name
+                    'name': name,
+                    'parents': [parents]
                 }
-            if parents is not None:
-                file_metadata['parents'] = [parents]
+            
             media = MediaFileUpload(path,
                                     resumable=True)
 
@@ -166,7 +170,11 @@ class GDrive:
         if path[-1] != '/':
             path += '/'
         folderName = path.split('/')[-2]
-    
+        
+        #If no parent is provided, then upload to "My Drive"
+        if parents is None:
+            parents = self.service.files().get(fileId='root').execute()['id']
+        
         file_metadata = {
                 'name': folderName,
                 'mimeType': 'application/vnd.google-apps.folder',
