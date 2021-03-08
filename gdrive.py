@@ -250,10 +250,11 @@ class GDrive:
         
             errorCounter = 1
             maxErrors = 5
+            done = False
             while done is False:
                 while True:
                     try:
-                        status, done = downloader.next_chunk()
+                        status, done = self.downloader.next_chunk()
                         break
                     except HttpError as e: #Wait 2 seconds then retry download request. Need to implement exponential backoff decorator
                         status_code = e.resp['status']
